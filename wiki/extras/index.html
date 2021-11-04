@@ -1,0 +1,1028 @@
+<!doctype html>
+<html lang="en" class="has-spaced-navbar-fixed-top">
+<head>
+
+
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.21.1"/>
+<link rel="icon" href="https://serpro69.github.io/kotlin-faker/favicon.ico">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>Extras</title>
+
+
+<meta name="description" content="kotlin-faker is a data-generation library intended for use during development and testing.
+It can also be sucessfully used for data-anonymization purposes.
+It generates realistically looking fake data such as names, addresses, banking, internet details, and many more.">
+
+
+
+<link rel="prev" href="https://serpro69.github.io/kotlin-faker/wiki/unique-generator">
+
+
+<link rel="next" href="https://serpro69.github.io/kotlin-faker/wiki/faker-dsl">
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="https://serpro69.github.io/kotlin-faker/Copper/27430c6a/assets/css/bulma.css"  />
+<link rel="stylesheet" type="text/css" href="https://serpro69.github.io/kotlin-faker/Copper/27430c6a/assets/css/extraCss.css"  />
+<link rel="stylesheet" type="text/css" href="https://serpro69.github.io/kotlin-faker/Copper/27430c6a/assets/css/bulma-tooltip.css"  />
+<link rel="stylesheet" type="text/css" href="https://serpro69.github.io/kotlin-faker/Copper/27430c6a/assets/css/bulma-accordion.min.css"  />
+<link rel="stylesheet" type="text/css" href="https://serpro69.github.io/kotlin-faker/Copper/27430c6a/assets/css/bulma.min.css"  />
+<link rel="stylesheet" type="text/css" href="https://serpro69.github.io/kotlin-faker/Copper/27430c6a/assets/css/extras.css"  />
+<link rel="stylesheet" type="text/css" href="https://serpro69.github.io/kotlin-faker/Copper/27430c6a/assets/css/homepage.css"  />
+<link rel="stylesheet" type="text/css" href="https://serpro69.github.io/kotlin-faker/Copper/27430c6a/assets/css/plugins.css"  />
+<link rel="stylesheet" type="text/css" href="https://serpro69.github.io/kotlin-faker/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://serpro69.github.io/kotlin-faker/ajax/libs/prism/1.17.1/themes/prism-tomorrow.min.css"  />
+<link rel="stylesheet" type="text/css" href="https://serpro69.github.io/kotlin-faker/assets/css/prism-duotone.css"  />
+<!-- end:inject styles -->
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://serpro69.github.io/kotlin-faker","environment":"prod","version":"1.8.1-SNAPSHOT"};
+</script>
+
+
+    <!-- start:inject meta-components [head] -->
+    
+
+        
+            
+        
+
+        
+            
+        
+            
+        
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+<nav class="navbar is-spaced is-fixed-top is-black" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://serpro69.github.io/kotlin-faker">
+        <img src="https://serpro69.github.io/kotlin-faker/assets/images/logo-white.png" alt="kotlin-faker">
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu" id="navMenu">
+      <div class="navbar-start">
+        <form id="search-input" data-orchid-search>
+  <div class="field has-addons">
+    <div class="control text-control">
+      <input class="input" type="text" name="query" placeholder="Search faker docs...">
+
+      <div id="search-progress" data-orchid-search-progress style="display: none;">
+        <div class="loader">Loading...</div>
+      </div>
+    </div>
+    <div class="control">
+      <input type="submit" class="button is-info" value="Search">
+    </div>
+  </div>
+</form>
+<div id="search-results" data-orchid-search-results style="display: none;">
+  <div class="carat"></div>
+  <b>
+    Search Results
+    <i class="fa fa-times" aria-hidden="true" onclick="$('[data-orchid-search-results]').hide()"></i>
+  </b>
+  <ul></ul>
+</div>
+
+      </div>
+      <div class="navbar-end">
+
+      
+      
+        <a class="navbar-item" href="https://serpro69.github.io/kotlin-faker">
+          <span class="icon has-text-info"><i class="fas fa-home"></i></span>
+          <span>Home</span>
+        </a>
+      
+      
+      
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            <span class="icon has-text-info"><i class="fas fa-graduation-cap"></i></span>
+            <span>User Guide</span>
+          </a>
+          <div class="navbar-dropdown is-right">
+          
+            
+              <a class="navbar-item" href="https://serpro69.github.io/kotlin-faker/wiki/getting-started">Getting Started</a>
+            
+          
+            
+              <a class="navbar-item" href="https://serpro69.github.io/kotlin-faker/wiki/faker-configuration">Faker Configuration</a>
+            
+          
+            
+              <a class="navbar-item" href="https://serpro69.github.io/kotlin-faker/wiki/unique-generator">Generator of Unique Values</a>
+            
+          
+            
+              <a class="navbar-item" href="https://serpro69.github.io/kotlin-faker/wiki/extras">Extras</a>
+            
+          
+            
+              <a class="navbar-item" href="https://serpro69.github.io/kotlin-faker/wiki/faker-dsl">Faker DSL</a>
+            
+          
+            
+              <a class="navbar-item" href="https://serpro69.github.io/kotlin-faker/wiki/data-providers">Data Providers</a>
+            
+          
+            
+              <a class="navbar-item" href="https://serpro69.github.io/kotlin-faker/wiki/available-locales">Available Locales</a>
+            
+          
+            
+              <a class="navbar-item" href="https://serpro69.github.io/kotlin-faker/wiki/java-interop">Java Interop</a>
+            
+          
+            
+              <a class="navbar-item" href="https://serpro69.github.io/kotlin-faker/wiki/faker-cli">Faker Bot CLI</a>
+            
+          
+          </div>
+        </div>
+      
+      
+      
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            <span class="icon has-text-info"><i class="fas fa-book"></i></span>
+            <span>API</span>
+          </a>
+          <div class="navbar-dropdown is-right">
+          
+            
+              <a class="navbar-item" href="https://serpro69.github.io/kotlin-faker/modules/core">Core API</a>
+            
+          
+          </div>
+        </div>
+      
+      
+      
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            <span class="icon has-text-info"><i class="fas fa-info-circle"></i></span>
+            <span>Information</span>
+          </a>
+          <div class="navbar-dropdown is-right">
+          
+            
+              <a class="navbar-item" href="https://serpro69.github.io/kotlin-faker/about">About</a>
+            
+          
+            
+              <a class="navbar-item" href="https://serpro69.github.io/kotlin-faker/changelog">Changelog</a>
+            
+          
+            
+              <a class="navbar-item" href="https://serpro69.github.io/kotlin-faker/contrib">Contributing</a>
+            
+          
+            
+              <a class="navbar-item" href="https://serpro69.github.io/kotlin-faker/faker-comparisons">Faker Comparisons</a>
+            
+          
+            
+              <a class="navbar-item" href="https://serpro69.github.io/kotlin-faker/license">License</a>
+            
+          
+            
+              <a class="navbar-item" href="https://serpro69.github.io/kotlin-faker/ack">Thanks</a>
+            
+          
+          </div>
+        </div>
+      
+      
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-12-desktop">
+      
+        <div class="box">
+          
+<nav class="breadcrumb" aria-label="breadcrumbs">
+<ul>
+
+
+    <li><a href="https://serpro69.github.io/kotlin-faker/wiki">Wiki</a></li>
+
+
+
+    <li class="is-active"><a href="https://serpro69.github.io/kotlin-faker/wiki/extras" aria-current="page">Extras</a></li>
+
+
+</ul>
+</nav>
+
+
+        </div>
+        <div class="content is-medium">
+        
+    <!-- start:inject components -->
+    
+        
+            
+                
+                    
+                        <div class="content is-medium-tablet is-large-fullhd">
+<h1 id="extras"><a href="#extras" id="extras" class="anchor"></a>Extras</h1>
+<p><code>kotlin-faker</code> provides additional functionality outside of data generation from static .yml dictionaries.</p>
+<h2 id="toc"><a href="#toc" id="toc" class="anchor"></a>ToC</h2>
+<ul>
+<li><a href="#random-instance-of-any-class">Random instance of any class</a>
+<ul>
+<li><a href="#pre-configuring-type-generation-for-constructor-arguments">Pre-configuring type generation for constructor arguments</a></li>
+<li><a href="#deterministic-constructor-selection">Deterministic constructor selection</a></li>
+<li><a href="#configuring-the-size-of-generated-collections">Configuring the size of generated Collections</a></li>
+</ul>
+</li>
+<li><a href="#random-everything">Random Everything</a></li>
+</ul>
+<p><br></p>
+<h2 id="random-instance-of-any-class"><a href="#random-instance-of-any-class" id="random-instance-of-any-class" class="anchor"></a>Random instance of any class</h2>
+<p>It is possible to create a random instance of (almost) any class.</p>
+<p>There are some rules to keep in mind:</p>
+<ul>
+<li>By default, the constructor with the least number of arguments is used (This can be configured - read on.)</li>
+<li><code>kolin.Array</code> type in the constructor is not supported at the moment</li>
+</ul>
+<p>Random instance generation is available through <code>Faker().randomProvider</code>:</p>
+<div class="tabs">
+  <ul data-tabs="JU76IlJ6X2">
+  
+    <li class="is-active">
+      <a>
+      
+        <p>
+          <span class="iconify-inline" data-icon="vscode-icons:file-type-kotlin"></span>
+          Kotlin
+        </p>
+      
+      </a>
+    </li>
+  
+  </ul>
+</div>
+<div data-panes="JU76IlJ6X2">
+
+  <div class="is-block tab-hidden content is-medium-tablet is-large-fullhd"><pre><code class="language-kotlin">class Foo(val a: String)
+class Bar(val foo: Foo)
+
+val foo: Foo = faker.randomProvider.randomClassInstance()
+val bar: Bar = faker.randomProvider.randomClassInstance()
+
+</code></pre></div>
+
+</div>
+<hr>
+<span class="icon-text">
+  <span class="icon"><i class="fas fa-list-ul"></i></span>
+  <span>
+    <a href="https://serpro69.github.io/kotlin-faker/wiki/extras#toc">back-to-toc</a>
+  </span>
+</span>
+<p><br></p>
+<h3 id="pre-configuring-type-generation-for-constructor-arguments"><a href="#pre-configuring-type-generation-for-constructor-arguments" id="pre-configuring-type-generation-for-constructor-arguments" class="anchor"></a>Pre-Configuring type generation for constructor arguments</h3>
+<p>Some, or all, of the constructor params can be instantiated with values following some pre-configured logic using <code>typeGenerator</code> function. Consider the following example:</p>
+<div class="tabs">
+  <ul data-tabs="RZyy0lwrxW">
+  
+    <li class="is-active">
+      <a>
+      
+        <p>
+          <span class="iconify-inline" data-icon="vscode-icons:file-type-kotlin"></span>
+          Kotlin
+        </p>
+      
+      </a>
+    </li>
+  
+  </ul>
+</div>
+<div data-panes="RZyy0lwrxW">
+
+  <div class="is-block tab-hidden content is-medium-tablet is-large-fullhd"><pre><code class="language-kotlin">class Baz(val id: Int, val uuid: UUID)
+
+val baz: Baz = faker.randomProvider.randomClassInstance {
+    typeGenerator&lt;UUID&gt; { UUID.fromString(&quot;00000000-0000-0000-0000-000000000000&quot;) }
+    typeGenerator&lt;Int&gt; { 0 }
+}
+
+assertEquals(baz.id, 0)
+assertEquals(baz.uuid, UUID.fromString(&quot;00000000-0000-0000-0000-000000000000&quot;))
+
+</code></pre></div>
+
+</div>
+<p><br>
+So for each instance of <code>Baz</code> the following will be true:</p>
+<pre><code>baz.id == 0
+baz.uuid == UUID.fromString(&quot;00000000-0000-0000-0000-000000000000&quot;)
+</code></pre>
+<p>This example itself does not make that much sense, since we're using &quot;static&quot; values, but we could also do something like:</p>
+<div class="tabs">
+  <ul data-tabs="HPKVpGWJ76">
+  
+    <li class="is-active">
+      <a>
+      
+        <p>
+          <span class="iconify-inline" data-icon="vscode-icons:file-type-kotlin"></span>
+          Kotlin
+        </p>
+      
+      </a>
+    </li>
+  
+  </ul>
+</div>
+<div data-panes="HPKVpGWJ76">
+
+  <div class="is-block tab-hidden content is-medium-tablet is-large-fullhd"><pre><code class="language-kotlin">val baz: Baz = faker.randomProvider.randomClassInstance {
+    typeGenerator&lt;UUID&gt; { UUID.randomUUID() }
+}
+</code></pre></div>
+
+</div>
+<p><br>
+...or even so:</p>
+<div class="tabs">
+  <ul data-tabs="1KMGxrdoiU">
+  
+    <li class="is-active">
+      <a>
+      
+        <p>
+          <span class="iconify-inline" data-icon="vscode-icons:file-type-kotlin"></span>
+          Kotlin
+        </p>
+      
+      </a>
+    </li>
+  
+  </ul>
+</div>
+<div data-panes="1KMGxrdoiU">
+
+  <div class="is-block tab-hidden content is-medium-tablet is-large-fullhd"><pre><code class="language-kotlin">class Person(val id: Int, val name: String)
+
+val person: Person = faker.randomProvider.randomClassInstance {
+    typeGenerator&lt;String&gt; { faker.name.fullName() }
+}
+</code></pre></div>
+
+</div>
+<hr>
+<span class="icon-text">
+  <span class="icon"><i class="fas fa-list-ul"></i></span>
+  <span>
+    <a href="https://serpro69.github.io/kotlin-faker/wiki/extras#toc">back-to-toc</a>
+  </span>
+</span>
+<p><br></p>
+<h3 id="deterministic-constructor-selection"><a href="#deterministic-constructor-selection" id="deterministic-constructor-selection" class="anchor"></a>Deterministic constructor selection</h3>
+<p>By default, the constructor with the least number of args is used when creating a random instance of the class. This might not always be desirable and can be configured. Consider the following example:</p>
+<div class="tabs">
+  <ul data-tabs="p30jSN8nPa">
+  
+    <li class="is-active">
+      <a>
+      
+        <p>
+          <span class="iconify-inline" data-icon="vscode-icons:file-type-kotlin"></span>
+          Kotlin
+        </p>
+      
+      </a>
+    </li>
+  
+  </ul>
+</div>
+<div data-panes="p30jSN8nPa">
+
+  <div class="is-block tab-hidden content is-medium-tablet is-large-fullhd"><pre><code class="language-kotlin">class Foo
+class Bar(val int: Int)
+class Baz(val foo: Foo, val string: String)
+class FooBarBaz {
+    var foo: Foo? = null
+        private set
+    var bar: Bar? = null
+        private set
+    var baz: Baz? = null
+        private set
+
+    constructor(foo: Foo) {
+        this.foo = foo
+    }
+
+    constructor(foo: Foo, bar: Bar) : this(foo) {
+        this.bar = bar
+    }
+
+    constructor(foo: Foo, bar: Bar, baz: Baz) : this(foo, bar) {
+        this.baz = baz
+    }
+}
+
+</code></pre></div>
+
+</div>
+<p><br>
+If there is a need to use the constructor with 3 arguments when creating an instance of <code>FooBarBaz</code>, we can do it like so:</p>
+<div class="tabs">
+  <ul data-tabs="vEEbW4gIpc">
+  
+    <li class="is-active">
+      <a>
+      
+        <p>
+          <span class="iconify-inline" data-icon="vscode-icons:file-type-kotlin"></span>
+          Kotlin
+        </p>
+      
+      </a>
+    </li>
+  
+  </ul>
+</div>
+<div data-panes="vEEbW4gIpc">
+
+  <div class="is-block tab-hidden content is-medium-tablet is-large-fullhd"><pre><code class="language-kotlin">val fooBarBaz: FooBarBaz = faker.randomProvider.randomClassInstance {
+    constructorParamSize = 3
+    fallbackStrategy = FallbackStrategy.USE_MAX_NUM_OF_ARGS
+}
+assertNotEquals(fooBarBaz.foo, null)
+assertNotEquals(fooBarBaz.bar, null)
+assertNotEquals(fooBarBaz.baz, null)
+
+</code></pre></div>
+
+</div>
+<p><br>
+In the above example, <code>FooBarBaz</code> will be instantiated with the first discovered constructor that has <code>parameters.size == 3</code>; if there are multiple constructors that satisfy this condition - a random one will be used. Failing that (for example, if there is no such constructor), a constructor with the maximum number of arguments will be used to create an instance of the class.</p>
+<p>Alternatively to <code>constructorParamSize</code>, a <code>constructorFilterStrategy</code> config property can be used as well:</p>
+<div class="tabs">
+  <ul data-tabs="Cvauedq95K">
+  
+    <li class="is-active">
+      <a>
+      
+        <p>
+          <span class="iconify-inline" data-icon="vscode-icons:file-type-kotlin"></span>
+          Kotlin
+        </p>
+      
+      </a>
+    </li>
+  
+  </ul>
+</div>
+<div data-panes="Cvauedq95K">
+
+  <div class="is-block tab-hidden content is-medium-tablet is-large-fullhd"><pre><code class="language-kotlin">val fooBarBaz: FooBarBaz = faker.randomProvider.randomClassInstance {
+    constructorFilterStrategy = ConstructorFilterStrategy.MAX_NUM_OF_ARGS
+}
+assertNotEquals(fooBarBaz.foo, null)
+assertNotEquals(fooBarBaz.bar, null)
+assertNotEquals(fooBarBaz.baz, null)
+
+</code></pre></div>
+
+</div>
+<p>The above has the following rules:</p>
+<ul>
+<li><code>constructorParamSize</code> config property takes precedence over <code>constructorFilterStrategy</code></li>
+<li>both can be specified at the same time, though in most cases it probably makes more sense to use <code>fallbackStrategy</code> with <code>constructorParamSize</code> as it just makes things a bit more readable</li>
+<li>configuration properties that are set in <code>randomClassInstance</code> block will be applied to all &quot;children&quot; classes. For example classes <code>Foo</code>, <code>Bar</code>, and <code>Baz</code> will use the same random instance configuration settings when instances of those classes are created in <code>FooBarBaz</code> class.</li>
+</ul>
+<hr>
+<span class="icon-text">
+  <span class="icon"><i class="fas fa-list-ul"></i></span>
+  <span>
+    <a href="https://serpro69.github.io/kotlin-faker/wiki/extras#toc">back-to-toc</a>
+  </span>
+</span>
+<p><br></p>
+<h3 id="configuring-the-size-of-generated-collections"><a href="#configuring-the-size-of-generated-collections" id="configuring-the-size-of-generated-collections" class="anchor"></a>Configuring the size of generated Collections</h3>
+<p>Support for <code>kotlin.collections.Collection</code> parameter types - <code>List</code>, <code>Set</code> and <code>Map</code> has been added in version <code>1.9.0</code> and with that - a new configuration parameter to configure the size of the generated collection.</p>
+<p>By default, all collections will be generated with only 1 element:</p>
+<div class="tabs">
+  <ul data-tabs="TR18ZFTBu7">
+  
+    <li class="is-active">
+      <a>
+      
+        <p>
+          <span class="iconify-inline" data-icon="vscode-icons:file-type-kotlin"></span>
+          Kotlin
+        </p>
+      
+      </a>
+    </li>
+  
+  </ul>
+</div>
+<div data-panes="TR18ZFTBu7">
+
+  <div class="is-block tab-hidden content is-medium-tablet is-large-fullhd"><pre><code class="language-kotlin">class Foo(
+    val list: List&lt;String&gt;,
+    val set: Set&lt;String&gt;,
+    val map: Map&lt;String, Int&gt;
+)
+
+val foo = faker.randomProvider.randomClassInstance&lt;Foo&gt;()
+
+assertEquals(foo.list.size, 1)
+assertEquals(foo.set.size, 1)
+assertEquals(foo.map.size, 1)
+
+</code></pre></div>
+
+</div>
+<p><br></p>
+<p>This can be configured using <code>collectionsSize</code> parameter:</p>
+<div class="tabs">
+  <ul data-tabs="2cbuhYbyHD">
+  
+    <li class="is-active">
+      <a>
+      
+        <p>
+          <span class="iconify-inline" data-icon="vscode-icons:file-type-kotlin"></span>
+          Kotlin
+        </p>
+      
+      </a>
+    </li>
+  
+  </ul>
+</div>
+<div data-panes="2cbuhYbyHD">
+
+  <div class="is-block tab-hidden content is-medium-tablet is-large-fullhd"><pre><code class="language-kotlin">class Foo(
+    val list: List&lt;String&gt;,
+    val set: Set&lt;String&gt;,
+    val map: Map&lt;String, Int&gt;
+)
+
+val foo = faker.randomProvider.randomClassInstance&lt;Foo&gt; {
+    collectionsSize = 6
+}
+
+assertEquals(foo.list.size, 6)
+assertEquals(foo.set.size, 6)
+assertEquals(foo.map.size, 6)
+
+</code></pre></div>
+
+</div>
+<div class="box has-background-white-ter">
+  <div class="note">
+    <div class="note-heading">
+    <h5><span class="note-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16">
+        <path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path>
+      </svg>
+    </span>info</h5>
+    </div>
+    <div class="note-content">
+      <p><p>Note that the <code>collectionsSize</code> configuration parameter affects all 3 types of Collections.</p></p>
+    </div>
+  </div>
+</div>
+<p><br></p>
+<div class="box has-background-warning">
+  <div class="warn">
+    <div class="warn-heading">
+      <h5><span class="warn-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path>
+        </svg>
+      </span>warn</h5>
+    </div>
+    <div class="warn-content">
+      <p><p>It is also worth noting that <code>typeGenerator&lt;Foo&gt; { ... }</code> configuration, which was covered above, will not affect <code>Foo</code> typed elements in a generated collection.</p></p>
+    </div>
+  </div>
+</div>
+<p>Consider the following example. If <code>typeGenerator&lt;String&gt; { &quot;a string&quot; }</code> would affect <code>String</code> typed elements of <code>Set</code>, the resulting generated set would be of size <code>1</code>:</p>
+<div class="tabs">
+  <ul data-tabs="dxsILmhvQR">
+  
+    <li class="is-active">
+      <a>
+      
+        <p>
+          <span class="iconify-inline" data-icon="vscode-icons:file-type-kotlin"></span>
+          Kotlin
+        </p>
+      
+      </a>
+    </li>
+  
+  </ul>
+</div>
+<div data-panes="dxsILmhvQR">
+
+  <div class="is-block tab-hidden content is-medium-tablet is-large-fullhd"><pre><code class="language-kotlin">class TestClass(
+    val string: String,
+    val set: Set&lt;String&gt;
+)
+
+val testClass = faker.randomProvider.randomClassInstance&lt;TestClass&gt; {
+    typeGenerator { &quot;a string&quot; }
+    collectionsSize = 10
+}
+
+assertEquals(testClass.string, &quot;a string&quot;)
+assertEquals(testClass.set.size, 10)
+
+</code></pre></div>
+
+</div>
+<p><br></p>
+<p>At the same time, <code>typeGenerator</code> configurator itself can be used with collections as well:</p>
+<div class="tabs">
+  <ul data-tabs="hAqEWfM4T5">
+  
+    <li class="is-active">
+      <a>
+      
+        <p>
+          <span class="iconify-inline" data-icon="vscode-icons:file-type-kotlin"></span>
+          Kotlin
+        </p>
+      
+      </a>
+    </li>
+  
+  </ul>
+</div>
+<div data-panes="hAqEWfM4T5">
+
+  <div class="is-block tab-hidden content is-medium-tablet is-large-fullhd"><pre><code class="language-kotlin">class Foo
+class Bar(
+    val list: List&lt;Foo&gt;,
+    val set: Set&lt;String&gt;,
+    val map: Map&lt;String, Int&gt;
+)
+
+val bar = faker.randomProvider.randomClassInstance&lt;Bar&gt; {
+    typeGenerator { emptyList&lt;Foo&gt;() }
+    typeGenerator { setOf(&quot;one&quot;, &quot;two&quot;, &quot;fortytwo&quot;) }
+    typeGenerator { mapOf(&quot;pwd&quot; to 12177) }
+}
+assertEquals(bar.list, emptyList&lt;Foo&gt;())
+assertEquals(bar.set, setOf(&quot;one&quot;, &quot;two&quot;, &quot;fortytwo&quot;))
+assertEquals(bar.map, mapOf(&quot;pwd&quot; to 12177))
+
+</code></pre></div>
+
+</div>
+<hr>
+<span class="icon-text">
+  <span class="icon"><i class="fas fa-list-ul"></i></span>
+  <span>
+    <a href="https://serpro69.github.io/kotlin-faker/wiki/extras#toc">back-to-toc</a>
+  </span>
+</span>
+<p><br></p>
+<h2 id="random-everything"><a href="#random-everything" id="random-everything" class="anchor"></a>Random Everything</h2>
+<p>Faker provides its wrapper functions around <code>java.util.Random</code> (with some additional functionality that is not covered by <code>java.util.Random</code>) through <code>Faker().random</code> property.</p>
+<h3 id="wrappers-around-javautilrandom"><a href="#wrappers-around-javautilrandom" id="wrappers-around-javautilrandom" class="anchor"></a>Wrappers around <code>java.util.Random</code></h3>
+<div class="tabs">
+  <ul data-tabs="8l9STLGlhm">
+  
+    <li class="is-active">
+      <a>
+      
+        <p>
+          <span class="iconify-inline" data-icon="vscode-icons:file-type-kotlin"></span>
+          Kotlin
+        </p>
+      
+      </a>
+    </li>
+  
+  </ul>
+</div>
+<div data-panes="8l9STLGlhm">
+
+  <div class="is-block tab-hidden content is-medium-tablet is-large-fullhd"><pre><code class="language-kotlin">faker.random.nextBoolean()
+faker.random.nextChar()
+faker.random.nextDouble()
+faker.random.nextFloat()
+faker.random.nextInt()
+faker.random.nextInt(bound = 100)
+faker.random.nextInt(min = 100, max = 999)
+faker.random.nextInt(intRange = (0..99))
+faker.random.nextLetter(upper = false)
+
+</code></pre></div>
+
+</div>
+<h3 id="random-enum-instance"><a href="#random-enum-instance" id="random-enum-instance" class="anchor"></a>Random Enum Instance</h3>
+<div class="tabs">
+  <ul data-tabs="HIw6RhfMJA">
+  
+    <li class="is-active">
+      <a>
+      
+        <p>
+          <span class="iconify-inline" data-icon="vscode-icons:file-type-kotlin"></span>
+          Kotlin
+        </p>
+      
+      </a>
+    </li>
+  
+  </ul>
+</div>
+<div data-panes="HIw6RhfMJA">
+
+  <div class="is-block tab-hidden content is-medium-tablet is-large-fullhd"><pre><code class="language-kotlin">enum class Foo {
+    ONE,
+    TWO,
+    FORTY_TWO
+}
+
+
+faker.random.nextEnum&lt;Foo&gt;()
+faker.random.nextEnum(enum = Foo::class.java)
+faker.random.nextEnum(values = Foo.values())
+faker.random.nextEnum(enum = Foo::class.java) { it != Foo.ONE }
+faker.random.nextEnum&lt;Foo&gt;(excludeName = &quot;ONE&quot;)
+
+</code></pre></div>
+
+</div>
+<h3 id="random-strings"><a href="#random-strings" id="random-strings" class="anchor"></a>Random Strings</h3>
+<div class="tabs">
+  <ul data-tabs="hzKyjXXsNF">
+  
+    <li class="is-active">
+      <a>
+      
+        <p>
+          <span class="iconify-inline" data-icon="vscode-icons:file-type-kotlin"></span>
+          Kotlin
+        </p>
+      
+      </a>
+    </li>
+  
+  </ul>
+</div>
+<div data-panes="hzKyjXXsNF">
+
+  <div class="is-block tab-hidden content is-medium-tablet is-large-fullhd"><pre><code class="language-kotlin">faker.random.randomString(
+    length = 42,
+    numericalChars = false
+)
+
+
+faker.random.randomString(
+    length = 24,
+    locale = Locale.forLanguageTag(&quot;nb-NO&quot;),
+    auxiliaryChars = true,
+    numericalChars = true
+)
+
+</code></pre></div>
+
+</div>
+<h3 id="random-sub-lists-and-sub-sets"><a href="#random-sub-lists-and-sub-sets" id="random-sub-lists-and-sub-sets" class="anchor"></a>Random sub-lists and sub-sets</h3>
+<div class="tabs">
+  <ul data-tabs="Xa1y2jn8CG">
+  
+    <li class="is-active">
+      <a>
+      
+        <p>
+          <span class="iconify-inline" data-icon="vscode-icons:file-type-kotlin"></span>
+          Kotlin
+        </p>
+      
+      </a>
+    </li>
+  
+  </ul>
+</div>
+<div data-panes="Xa1y2jn8CG">
+
+  <div class="is-block tab-hidden content is-medium-tablet is-large-fullhd"><pre><code class="language-kotlin">val list = List(100) { it }
+faker.random.randomSublist(list, size = 10, shuffled = true)
+
+
+val set = setOf(*List(100) { it }.toTypedArray())
+faker.random.randomSubset(set, size = 10, shuffled = true)
+
+</code></pre></div>
+
+</div>
+<h3 id="random-element-from-a-listarray"><a href="#random-element-from-a-listarray" id="random-element-from-a-listarray" class="anchor"></a>Random element from a list/array</h3>
+<div class="tabs">
+  <ul data-tabs="tlHo5dI9Dd">
+  
+    <li class="is-active">
+      <a>
+      
+        <p>
+          <span class="iconify-inline" data-icon="vscode-icons:file-type-kotlin"></span>
+          Kotlin
+        </p>
+      
+      </a>
+    </li>
+  
+  </ul>
+</div>
+<div data-panes="tlHo5dI9Dd">
+
+  <div class="is-block tab-hidden content is-medium-tablet is-large-fullhd"><pre><code class="language-kotlin">val list = listOf(1, 2, 3)
+faker.random.randomValue(list)
+
+</code></pre></div>
+
+</div>
+<h3 id="random-uuid"><a href="#random-uuid" id="random-uuid" class="anchor"></a>Random UUID</h3>
+<div class="tabs">
+  <ul data-tabs="cvKLzYXxZL">
+  
+    <li class="is-active">
+      <a>
+      
+        <p>
+          <span class="iconify-inline" data-icon="vscode-icons:file-type-kotlin"></span>
+          Kotlin
+        </p>
+      
+      </a>
+    </li>
+  
+  </ul>
+</div>
+<div data-panes="cvKLzYXxZL">
+
+  <div class="is-block tab-hidden content is-medium-tablet is-large-fullhd"><pre><code class="language-kotlin">faker.random.nextUUID()
+
+</code></pre></div>
+
+</div>
+<hr>
+<span class="icon-text">
+  <span class="icon"><i class="fas fa-list-ul"></i></span>
+  <span>
+    <a href="https://serpro69.github.io/kotlin-faker/wiki/extras#toc">back-to-toc</a>
+  </span>
+</span>
+<p><br></p>
+
+</div>
+
+                    
+                
+            
+        
+    
+    <!-- end:inject components -->
+
+
+        </div>
+      
+      
+<nav class="pagination is-medium" role="navigation" aria-label="pagination">
+  <a class="pagination-previous button is-large is-link is-outlined"
+   href="https://serpro69.github.io/kotlin-faker/wiki/unique-generator" >
+      <span class="icon">
+        <i class="fas fa-arrow-left"></i>
+      </span>
+  </a>
+  <a class="pagination-next button is-large is-link is-outlined"
+   href="https://serpro69.github.io/kotlin-faker/wiki/faker-dsl" >
+      <span class="icon">
+        <i class="fas fa-arrow-right"></i>
+      </span>
+  </a>
+</nav>
+
+
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-left-tablet has-text-centered-mobile">
+        
+          <a href="/kotlin-faker" class="button is-dark">
+            <span class="icon"><i class="fab fa-lg fas fa-home"></i></span>
+            <span>Home</span>
+          </a>
+        
+          <a href="https://github.com/serpro69/kotlin-faker/" class="button is-dark">
+            <span class="icon"><i class="fab fa-lg fab fa-github"></i></span>
+            <span>GitHub</span>
+          </a>
+        
+        </p>
+      </div>
+      <div class="column">
+        <p class="has-text-right-tablet has-text-centered-mobile">
+          <a href="https://bulma.io/">
+            <img
+              src="https://serpro69.github.io/kotlin-faker/assets/images/made-with-bulma--semiblack.png"
+              alt="Bulma"
+              width="171"
+              height="32">
+          </a>
+          <a href="https://orchid.run/">
+            <img
+              src="https://serpro69.github.io/kotlin-faker/assets/svg/orchid/logo_top_light.svg"
+              alt="Orchid 0.21.1"
+              width="64"
+              height="32">
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- start:inject scripts -->
+<script defer data-search-pseudo-elements="true" src="https://serpro69.github.io/kotlin-faker/Copper/27430c6a/releases/v5.4.0/js/all.js"></script>
+<script  src="https://serpro69.github.io/kotlin-faker/Copper/27430c6a/assets/js/bulma.js"></script>
+<script  src="https://serpro69.github.io/kotlin-faker/Copper/27430c6a/assets/js/bulma-accordion.min.js"></script>
+<script  src="https://serpro69.github.io/kotlin-faker/Copper/27430c6a/assets/js/bulma-tabs.js"></script>
+<script  src="https://serpro69.github.io/kotlin-faker/Copper/27430c6a/assets/js/simpleFilter.js"></script>
+<script  src="https://serpro69.github.io/kotlin-faker/Copper/27430c6a/2/2.0.1/iconify.min.js"></script>
+<script  src="https://serpro69.github.io/kotlin-faker/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script  src="https://serpro69.github.io/kotlin-faker/lunr/lunr.js"></script>
+<script  src="https://serpro69.github.io/kotlin-faker/assets/js/orchidSearch.js"></script>
+<script  src="https://serpro69.github.io/kotlin-faker/ajax/libs/prism/1.17.1/prism.min.js"></script>
+<script  src="https://serpro69.github.io/kotlin-faker/ajax/libs/prism/1.17.1/components/prism-clike.min.js"></script>
+<script  src="https://serpro69.github.io/kotlin-faker/ajax/libs/prism/1.17.1/components/prism-markup-templating.min.js"></script>
+<script  src="https://serpro69.github.io/kotlin-faker/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
+<script  src="https://serpro69.github.io/kotlin-faker/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>
+<script  src="https://serpro69.github.io/kotlin-faker/ajax/libs/prism/1.17.1/components/prism-groovy.min.js"></script>
+<script  src="https://serpro69.github.io/kotlin-faker/ajax/libs/prism/1.17.1/components/prism-yaml.min.js"></script>
+<script  src="https://serpro69.github.io/kotlin-faker/ajax/libs/prism/1.17.1/components/prism-yml.min.js"></script>
+<script  src="https://serpro69.github.io/kotlin-faker/ajax/libs/prism/1.17.1/components/prism-asciidoc.min.js"></script>
+<script  src="https://serpro69.github.io/kotlin-faker/ajax/libs/prism/1.17.1/components/prism-markdown.min.js"></script>
+<script  src="https://serpro69.github.io/kotlin-faker/ajax/libs/prism/1.17.1/components/prism-twig.min.js"></script>
+<script  src="https://serpro69.github.io/kotlin-faker/ajax/libs/prism/1.17.1/components/prism-xml.min.js"></script>
+<!-- end:inject scripts -->
+
+
+
+</body>
+</html>

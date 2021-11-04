@@ -1,0 +1,22 @@
+{
+  "ownKey": "kotlindoc",
+  "childrenPages": {"modules": {
+    "ownKey": "modules",
+    "childrenPages": {"core": {
+      "ownKey": "core",
+      "ownPages": [{
+        "reference": {
+          "path": "modules",
+          "baseUrl": "https://serpro69.github.io/kotlin-faker",
+          "fileName": "core",
+          "extension": "html",
+          "usePrettyUrl": true,
+          "link": "https://serpro69.github.io/kotlin-faker/modules/core"
+        },
+        "description": "",
+        "title": "Core API",
+        "content": "<h1 id=\"faker-core\"><a href=\"#faker-core\" id=\"faker-core\" class=\"anchor\"><\/a>faker core<\/h1>\n<p><strong>This page is still under development<\/strong><\/p>\n"
+      }]
+    }}
+  }}
+}
